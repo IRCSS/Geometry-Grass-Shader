@@ -79,7 +79,7 @@ Shader "Unlit/GrassShader"
 				tristream.Append(o);
 				tristream.RestartStrip();
 
-				float3 normal = cross(input[1].vertex - input[0].vertex, input[2].vertex - input[0].vertex);
+				float3 normal = normalize(cross(input[1].vertex - input[0].vertex, input[2].vertex - input[0].vertex));
 
 				int numberOfStacks = 36;
 				float offset = 0.025f;
